@@ -1,0 +1,220 @@
+/*===== GOOGLE FONTS =====*/
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v19/pxiEyp8kv8JHgFVrFJA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v19/pxiByp8kv8JHgFVrLGT9V1s.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v19/pxiByp8kv8JHgFVrLEj6V1s.ttf) format('truetype');
+}
+/*===== VARIABLES CSS =====*/
+:root {
+  --header-height: 2rem;
+  --text-color: #707070;
+  --body-color: #FBFEFD;
+  --container-color: #FFFFFF;
+  --border: #d7d9d9;
+  --body-font: 'Poppins', sans-serif;
+  --input: #fff;
+}
+/*========== BASE ==========*/
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+/*========== Variables Dark theme ==========*/
+body.dark-theme {
+  --text-color: #C7D1CC;
+  --body-color: #1c1d21;
+  --container-color: #36383e;
+  --border: #474a4c;
+  --input: #36383e;
+}
+.card,
+.modal-content {
+  background-color: var(--container-color);
+}
+/*========== Button Dark/Light ==========*/
+.change-theme {
+  position: absolute;
+  right: 1rem;
+  top: 1.8rem;
+  color: var(--text-color);
+  font-size: 1rem;
+  cursor: pointer;
+}
+body {
+  margin: var(--header-height) 0 0 0;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+h1,
+h2,
+h3,
+p,
+ul {
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+.form-control {
+  background-color: var(--input);
+  border-color: #0d6efd;
+  color: var(--first-color);
+}
+.form-control:focus {
+  background-color: var(--input);
+  border-color: #0d6efd;
+  color: var(--first-color);
+}
+.table {
+  color: var(--first-color);
+}
+/*========== CLASS CSS ==========*/
+.section {
+  padding: 4rem 0 2rem;
+}
+.section-title,
+.section-subtitle {
+  text-align: center;
+}
+.section-title {
+  font-size: var(--h1-font-size);
+  color: var(--title-color);
+  margin-bottom: var(--mb-3);
+}
+.section-subtitle {
+  display: block;
+  color: var(--first-color);
+  font-weight: var(--font-medium);
+  margin-bottom: var(--mb-1);
+}
+/* Change background header */
+.scroll-header {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+/* Scroll top */
+.scrolltop {
+  position: fixed;
+  right: 1rem;
+  bottom: -20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.3rem;
+  background: rgba(6, 156, 84, 0.5);
+  border-radius: 0.4rem;
+  z-index: var(--z-tooltip);
+  transition: 0.4s;
+  visibility: hidden;
+}
+.scrolltop:hover {
+  background-color: var(--first-color-alt);
+}
+.scrolltop__icon {
+  font-size: 1.8rem;
+  color: var(--body-color);
+}
+/* Show scrolltop */
+.show-scroll {
+  visibility: visible;
+  bottom: 1.5rem;
+}
+.navbared .nav {
+  display: block;
+}
+.navbared .col-2 {
+  border-right: 1px solid var(--border);
+}
+.content {
+  padding-top: 2rem;
+}
+.content .Undetected {
+  color: #fff;
+  background: green;
+}
+.content span {
+  font-weight: bold;
+}
+.buy .card {
+  border: none;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+  border-radius: 0.25px;
+}
+.auth input {
+  height: 60px;
+}
+.auth .btn-sm {
+  margin-top: 2rem;
+}
+.profile .modal input {
+  height: 60px;
+  margin-bottom: 1rem;
+}
+.profile .modal .input-group-text {
+  height: 60px;
+}
+.adm .btn {
+  margin-bottom: 1rem;
+}
+.fade:not(.show) {
+  display: none;
+}
+@media screen and (max-width: 675px) {
+  .navbared .col-2 {
+    width: 100%;
+  }
+  iframe {
+    width: 100%;
+  }
+  .card-img {
+    height: 120px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .card-img {
+    height: 200px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .buy .card {
+    margin-bottom: 2rem;
+  }
+  .profile .btn {
+    margin-bottom: 2rem;
+  }
+}
+.modal-header {
+  border-bottom: 1px solid var(--border);
+}
+.modal-footer {
+  border-top: 1px solid var(--border);
+}
+.carded p,
+h5 {
+  color: #36383e;
+}
+h5 {
+  color: var(--first-color);
+}
